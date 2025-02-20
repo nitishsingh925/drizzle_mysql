@@ -1,0 +1,9 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Drizzle ORM files
+drizzle
+
+# Environment variables
+.env
