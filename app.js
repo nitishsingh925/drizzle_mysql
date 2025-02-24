@@ -9,8 +9,16 @@ const main = async () => {
   //   email: "nitishsingh@gmail.com",
   // });
   // show user
-  const user = await db.select().from(usersTable);
-  console.log(user);
+  // const user = await db.select().from(usersTable);
+  // console.log(user);
+
+  // user find with email id
+  const userWithEmail = await db
+    .select()
+    .from(usersTable)
+    .where({ email: "nitishsingh@gmail.com" });
+
+  console.log(userWithEmail);
 };
 
 main().catch((error) => {
