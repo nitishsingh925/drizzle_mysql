@@ -13,12 +13,19 @@ const main = async () => {
   // console.log(user);
 
   // user find with email id
-  const userWithEmail = await db
-    .select()
-    .from(usersTable)
-    .where({ email: "nitishsingh@gmail.com" });
+  // const userWithEmail = await db
+  //   .select()
+  //   .from(usersTable)
+  //   .where({ email: "nitishsingh@gmail.com" });
 
-  console.log(userWithEmail);
+  // user update with email id
+
+  const userUpdateWithEmail = await db
+    .update(usersTable)
+    .set({ name: "Nitish" })
+    .where({ email: "nitish@gmail.com" });
+
+  console.log(userUpdateWithEmail);
 };
 
 main().catch((error) => {
