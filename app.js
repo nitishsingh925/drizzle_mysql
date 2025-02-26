@@ -20,12 +20,18 @@ const main = async () => {
 
   // user update with email id
 
-  const userUpdateWithEmail = await db
-    .update(usersTable)
-    .set({ name: "Nitish" })
+  // const userUpdateWithEmail = await db
+  //   .update(usersTable)
+  //   .set({ name: "Nitish" })
+  //   .where({ email: "nitish@gmail.com" });
+
+  // delete user with email id
+
+  const userDeleteWithEmail = await db
+    .delete(usersTable)
     .where({ email: "nitish@gmail.com" });
 
-  console.log(userUpdateWithEmail);
+  console.log(userDeleteWithEmail);
 };
 
 main().catch((error) => {
